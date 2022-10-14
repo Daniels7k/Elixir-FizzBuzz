@@ -7,6 +7,10 @@ defmodule ElixirfizzbuzzWeb.Router do
 
   scope "/api", ElixirfizzbuzzWeb do
     pipe_through :api
+    get "/fizzbuzz", FizzBuzzController, :index
+    get "/fizz", FizzController, :index
+    get "/buzz", BuzzController, :index
+    get "/other", OtherController, :index
   end
 
   # Enables LiveDashboard only for development
