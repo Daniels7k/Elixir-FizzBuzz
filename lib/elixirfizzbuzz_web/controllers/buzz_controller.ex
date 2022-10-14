@@ -2,13 +2,8 @@ defmodule ElixirfizzbuzzWeb.BuzzController do
   use ElixirfizzbuzzWeb, :controller
 
   def index(conn, _params) do
-    buzz = fn
-      0, _ -> "Buzz"
-      _, n -> n
-    end
-
     buzzCatcher = fn n ->
-      buzz.(rem(n, 5), n)
+      rem(n, 5) == 0
     end
 
     conn
