@@ -14,4 +14,8 @@ To start your Phoenix server:
 
 ## Information
 
-the routes were defined with the GET type, to facilitate the visualization
+The routes were defined with the GET type, to facilitate the visualization
+
+The routes definitions are in ``./lib/elixirfizzbuzz_web/router``
+
+The controllers files are in ``./lib/elixirfizzbuzz_web/controllers``
