@@ -12,6 +12,6 @@ defmodule ElixirfizzbuzzWeb.BuzzController do
     end
 
     conn
-    |> json(%{buzz: Enum.map(1..100, buzzCatcher)})
+    |> json(%{buzz: Enum.filter(1..100, buzzCatcher)})
   end
 end
