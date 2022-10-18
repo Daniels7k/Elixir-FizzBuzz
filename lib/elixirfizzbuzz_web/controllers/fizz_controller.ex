@@ -1,12 +1,10 @@
 defmodule ElixirfizzbuzzWeb.FizzController do
   use ElixirfizzbuzzWeb, :controller
 
-  def index(conn, _params) do
-    fizzCatcher = fn n ->
-      rem(n, 3) == 0
-    end
+  alias ElixirfizzbuzzWeb.FizzBuzzCatcher
 
+  def index(conn, _params) do
     conn
-    |> json(%{fizz: Enum.filter(1..100, fizzCatcher)})
+    |> json(%{fizz: FizzBuzzCatcher.index("fizz")})
   end
 end
